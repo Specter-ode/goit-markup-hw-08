@@ -10,6 +10,7 @@
     &__list {
         @extend %list;
         display: flex;
+        flex-wrap: wrap;
 
     }
     &__icon {
@@ -21,6 +22,7 @@
 
 .clients__item {
     margin-right: 30px;
+    
     &:last-child {
         margin-right: 0;
     }

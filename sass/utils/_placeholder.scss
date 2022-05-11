@@ -19,19 +19,19 @@
 
 /* Базовые параметры секций */
 %section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /* Загаловки секций*/
 %section__title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
     color: $text-color;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 24px;
+    line-height: 1.14;
 }
 /* Кнопка*/
 %button {
