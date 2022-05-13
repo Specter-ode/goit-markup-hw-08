@@ -30,6 +30,7 @@
     @media screen and (min-width:768px) {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 }
 /* Логотип */
@@ -41,6 +42,11 @@
     font-weight: 700;
     line-height: 1.17;
     text-decoration: none;
+
+    @media screen and (min-width:768px) {
+    font-size: 26px;
+    line-height: 1.29;
+    }
 
     &__style {
         color: $accent-color;
@@ -104,6 +110,8 @@
     }
     @media screen and (min-width:768px) {
         display: flex;
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
         margin-right: 84px;
     }
     @media screen and (min-width:1200px) {
@@ -171,6 +179,7 @@
     flex-direction: column-reverse;
     }
     @media screen and (min-width:1200px) {
+    margin-left: auto;
     flex-direction: row;
     }
 }
@@ -213,6 +222,9 @@
     &:focus {
         color: $accent-color;
         }
+    }
+    @media screen and (min-width:1200px) {
+    font-size: 14px;
     }
 }
 .contact__icon {
