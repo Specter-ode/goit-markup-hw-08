@@ -77,10 +77,12 @@
     </header>
     <main>
         <!-- Hero / Эффективные решения -->
-            <section class="hero section">
-                <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
-            </section>
+            <section class="hero">
+                <div class="hero__container"> 
+                    <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+                    <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
+                </div>
+                </section>
         <!-- Modal / Модальное окно -->
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
@@ -116,12 +118,14 @@
                                 <label class="field__label" for="comment">Комментарий</label>
                                 <textarea class="field__textarea" placeholder="Введите текст" id="comment"></textarea>
                             </div>
-                        <div class="field__policy">
-                            <input type="checkbox" name="policy" id="policy">
-                            <label class="field__label--policy" for="policy">
-                                Соглашаюсь с рассылкой и принимаю 
-                                <a href="" class="field__link">Условия договора</a></label>
-                        </div>
+                            <div class="privat-policy">
+                                <label class="privat-policy__label" for="privat-policy">
+                                    <input class="privat-policy__checkbox" type="checkbox" name="privat-policy" id="privat-policy">
+                                    <span class="privat-policy__icon"></span>
+                                    Соглашаюсь с рассылкой и принимаю
+                                    <a href="" class="privat-policy__link">Условия договора</a>
+                                </label>
+                            </div>
                         <button class="field__button" type="submit">Отправить</button>
                     </form>
                 </div>
@@ -184,15 +188,23 @@
             <h2 class="about__title">Чем мы занимаемся</h2>
                 <ul class="about__list">
                     <li class="about__item">
-                        <img src="./images/box1.jpg" class="about__image" alt="image programer is working" width="370" />
+                        <img src="./images/about/about1.jpg"
+                        srcset="./images/about/about1.jpg 1x, ./images/about/about1@2x.jpg 2x"
+                        class="about__image" 
+                        alt="image programer is working" width="370" />
                         <h3 class="about__subject">Десктопные приложения</h3>
                     </li>
                     <li class="about__item">
-                        <img src="./images/box2.jpg" class="about__image" alt="designers are developing application for smartphones-" width="370"/>
+                        <img src="./images/about/about2.jpg" 
+                        srcset="./images/about/about2.jpg 1x, ./images/about/about2@2x.jpg 2x"
+                        class="about__image" 
+                        alt="designers are developing application for smartphones-" width="370"/>
                         <h3 class="about__subject">Мобильные приложения</h3>
                     </li>
                     <li class="about__item">
-                        <img src="./images/box3.jpg" class="about__image" alt="creative artist web-design is working-" width="370"/>
+                        <img src="./images/about/about1.jpg" 
+                        srcset="./images/about/about3.jpg 1x, ./images/about/about3@2x.jpg 2x"
+                        class="about__image" alt="creative artist web-design is working-" width="370"/>
                         <h3 class="about__subject">Дизайнерские решения</h3>
                     </li>
                 </ul>
@@ -204,7 +216,18 @@
             <h2 class="team__title">Наша команда</h2>
             <ul class="team__list">
                 <li class="team__item" >
-                    <img src="./images/pdesigner.jpg" alt="Игорь Демьяненко" class="team__image" width="270"/>
+                    <img
+                    srcset="
+                    ./images/team/team1-270.jpg 270w
+                    ./images/team/team1-354.jpg 354w
+                    ./images/team/team1-450.jpg 450w
+                    ./images/team/team1-270@2x.jpg 540w
+                    ./images/team/team1-354@2x.jpg 708w
+                    ./images/team/team1-450@2x.jpg 900w
+                    "
+                    src="./images/team/team1-450.jpg"
+                    alt="Игорь Демьяненко" class="team__image"
+                    sizes="(min-width: 1200px) 25vh, (min-width: 768px) 50vh, 100vh"/>
                     <div class="team__thumbs">
                         <h3 class="team__name">Игорь Демьяненко</h3>
                         <p class="team__speciality">Product Designer</p>
@@ -241,7 +264,18 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img src="./images/developer.jpg" alt="Ольга Репина" class="team__image" width="270" />
+                    <img
+                    srcset="
+                    ./images/team/team2-270.jpg 270w
+                    ./images/team/team2-354.jpg 354w
+                    ./images/team/team2-450.jpg 450w
+                    ./images/team/team2-270@2x.jpg 540w
+                    ./images/team/team2-354@2x.jpg 708w
+                    ./images/team/team2-450@2x.jpg 900w
+                    "
+                    src="./images/team/team2-450.jpg"
+                    alt="Игорь Демьяненко" class="team__image"
+                    sizes="(min-width: 1200px) 25vh, (min-width: 768px) 50vh, 100vh"/>
                     <div class="team__thumbs">
                         <h3 class="team__name">Ольга Репина</h3>
                         <p class="team__speciality">Frontend Developer</p>

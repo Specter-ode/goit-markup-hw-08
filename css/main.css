@@ -269,6 +269,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body img {
+  display: block;
+}
+
 /*Утилиты для списков*/
 .site-nav, .contact, .social-network, .work__list, .about__list, .team__list, .clients__list, .address__list, .social-link {
   list-style: none;
@@ -277,10 +281,11 @@ body {
 }
 
 /* Контейнер */
-.header-page__container, .work__container, .about__container, .team__container, .clients__container, .page-footer__container {
+.header-page__container, .hero__container, .work__container, .about__container, .team__container, .clients__container, .page-footer__container {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-width: 320px;
 }
 
 /* Базовые параметры секций */
@@ -289,7 +294,7 @@ body {
   padding-bottom: 60px;
 }
 
-/* Загаловки секций*/
+/* Названия секций*/
 .team__title, .clients__title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -320,7 +325,7 @@ body {
 }
 
 /* Hidden */
-.work__hidden {
+.privat-policy__checkbox, .work__hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -727,19 +732,28 @@ body {
   padding: 118px 0;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main-img.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-img.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero/hero-450.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/hero-450.jpg);
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    width: 480px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero/hero-450@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/hero-450@2x.jpg);
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero/hero-768.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/hero-768.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero/hero-768@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/hero-768@2x.jpg);
   }
 }
 
@@ -747,6 +761,33 @@ body {
   .hero {
     padding: 200px 0;
     max-width: 1600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero/hero-1200.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/hero-1200.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero/hero-1200@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/hero-1200@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero__container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    width: 1200px;
   }
 }
 
@@ -787,7 +828,7 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -803,17 +844,17 @@ body {
   left: 50%;
   opacity: 1;
   width: 450px;
-  height: 609px;
+  padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 1200px) {
@@ -827,16 +868,13 @@ body {
   fill: currentColor;
   width: 18px;
   height: 18px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
-  margin: 40px 40px 0 40px;
+  margin: 0 0 12px 0;
   text-align: center;
   color: #212121;
 }
@@ -876,7 +914,6 @@ body {
 
 /* Cтили для модального окна */
 .form {
-  margin: 12px auto 40px auto;
   width: 370px;
 }
 
@@ -898,37 +935,7 @@ body {
   margin-bottom: 10px;
 }
 
-.field:nth-child(4) {
-  margin-bottom: 20px;
-}
-
-.field__policy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width1200) {
-  .field__policy {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.field__link {
-  color: #2196F3;
-}
-
 .field__label {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -936,30 +943,17 @@ body {
   margin-bottom: 4px;
 }
 
-.field__label--policy {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  color: #757575;
-}
-
-@media screen and (min-width1200) {
-  .field__label--policy {
-    font-size: 14px;
-    line-height: 1.71;
-    margin-left: 8px;
-  }
-}
-
 .field__input {
   padding: 11px 12px 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  height: 40px;
 }
 
 .field__input:focus {
   border: 1px solid #2196F3;
   cursor: pointer;
+  outline: none;
 }
 
 .field__input:hover {
@@ -982,11 +976,6 @@ body {
   color: #2196F3;
 }
 
-input[type="checkbox"] {
-  width: 16px;
-  height: 15px;
-}
-
 .field__textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -998,35 +987,32 @@ input[type="checkbox"] {
 
 .field__textarea:focus {
   border: 1px solid #2196F3;
+  outline: none;
 }
 
 .field__textarea::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .field__textarea:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .field__textarea::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .field__textarea::placeholder {
-  font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
@@ -1036,6 +1022,55 @@ input[type="checkbox"] {
 .textarea-field:not(:placeholder-shown) {
     border-color: #2196f3;
 } */
+.privat-policy {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.privat-policy__link {
+  color: #2196F3;
+}
+
+.privat-policy__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  line-height: 1.17;
+  color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .privat-policy__label {
+    font-size: 14px;
+    line-height: 1.71;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.privat-policy__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.privat-policy__checkbox:checked + .privat-policy__icon {
+  border-color: transparent;
+  background-image: url(/images/check-active.svg);
+  background-origin: border-box;
+  background-size: contain;
+}
+
 .field__button {
   display: block;
   margin-left: auto;
@@ -1188,7 +1223,6 @@ input[type="checkbox"] {
 }
 
 .about__image {
-  display: block;
   width: 370px;
 }
 
@@ -1270,23 +1304,6 @@ input[type="checkbox"] {
   font-size: 16px;
   line-height: 1.17;
   color: #757575;
-}
-
-.team__image {
-  display: block;
-  width: 450px;
-}
-
-@media screen and (min-width: 768px) {
-  .team__image {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team__image {
-    width: 270px;
-  }
 }
 
 .team__list {

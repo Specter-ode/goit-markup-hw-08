@@ -281,6 +281,7 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-width: 320px;
 }
 
 /* Базовые параметры секций */
@@ -289,7 +290,7 @@ body {
   padding-bottom: 60px;
 }
 
-/* Загаловки секций*/
+/* Названия секций*/
 /* Кнопка*/
 .page-footer__button {
   color: #ffffff;

@@ -5,9 +5,13 @@ body {
     color: $text-color;
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
+    img {
+            display: block;
+            // max-width: 100%;
+            // height: auto;
+        }
 }
 @import './utils/placeholder';
-@import './components/logo';
 @import './components/page-header';
 @import './components/hero-section';
 @import './components/work-section';
