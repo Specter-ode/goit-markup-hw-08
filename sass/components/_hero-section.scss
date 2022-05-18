@@ -273,7 +273,7 @@
     border-radius: 2px;
     .privat-policy__checkbox:checked+& {
         border-color: transparent;
-        background-image: url(/images/check-active.svg);
+        background-image: url(../images/check-active.svg);
         background-origin: border-box;
         background-size: contain;
     }
