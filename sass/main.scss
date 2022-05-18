@@ -7,7 +7,9 @@ body {
     letter-spacing: 0.03em;
 }
 img {
-    display:block;
+        display: block;
+        width: 100%;
+        height: auto;
 }
 @import './utils/placeholder';
 @import './components/page-header';
