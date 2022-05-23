@@ -470,6 +470,8 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    overflow: scroll;
+    padding: 48px 40px 48px 40px;
     background: #FFFFFF;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -481,7 +483,19 @@ img {
 
 @media screen and (min-width: 768px) {
   .header-page__menu {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     margin-left: 88px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -502,18 +516,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .site-nav {
-    margin-right: 84px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    margin-right: 305px;
   }
 }
 
@@ -595,7 +597,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .contact {
-    margin-left: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -749,6 +750,8 @@ img {
   .type {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: -15px;
+    margin-right: -8px;
   }
 }
 
@@ -773,13 +776,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .type__item {
-    margin-bottom: 15px;
-  }
-  .type__item:nth-child(2n+3) {
-    margin-right: 0;
-  }
-  .type__item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
+    margin-top: 15px;
   }
 }
 
