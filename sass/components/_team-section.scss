@@ -16,15 +16,13 @@
     &__title {
         @extend %section__title;
         @media screen and (min-width:1200px) {
-            font-size: 36px;
-            line-height: 1.17;
+            @include font(null, 36px, 1.17, null);
             margin-bottom: 50px;
         }
     }
     &__thumbs {
-        display: flex;
+        @include flex(center, null);
         flex-direction: column;
-        align-items: center;
         padding: 30px 0 24px 0;
         @media screen and (min-width:1200px) {
             padding-top: 24px;
@@ -33,27 +31,13 @@
     &__name {
         margin-top: 0;
         margin-bottom: 10px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.17;
+        @include font(500, 16px, 1.17, 0.03em);
     }
     &__speciality {
         margin-top: 0;
         margin-bottom: 16px;
-        font-size: 16px;
-        line-height: 1.17;
+        @include font(null, 16px, 1.17, 0.03em);
         color: $secondary-text-color;
-    }
-    &__image {
-        @media screen and (min-width:480px) {
-        width: 450px;
-        }
-        @media screen and (min-width:768px) {
-        width: 354px;
-        }
-        @media screen and (min-width:1200px) {
-        width: 270px;
-        }
     }
     &__list {
         @extend %list;

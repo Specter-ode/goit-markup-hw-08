@@ -20,7 +20,7 @@
         @extend %visually-hidden;
     }
     &__image {
-        @include centeredFlex;
+        @include flex(center, center);
         background-color: #F5F4FA;
         height: 120px;
         border: none;
@@ -34,9 +34,7 @@
         padding-top: 30px;
     }
     &__title {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
+        @include font(700, 14px, 1.14, 0.03em);
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 10px;
@@ -45,8 +43,7 @@
     &__description {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 14px;
-        line-height: 1.71;
+        @include font(null, 14px, 1.71, 0.03em);
         text-align: left;
         color: $secondary-text-color;
     }

@@ -1,7 +1,13 @@
-@mixin centeredFlex($type:flex) {
-    display: $type;
-    align-items: center;
-    justify-content: center;
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin font($fw, $fs, $lh, $ls) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
 }
 /*Утилиты для списков*/
 %list {
@@ -31,18 +37,14 @@
     margin-bottom: 30px;
     text-align: center;
     color: $text-color;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.14;
+    @include font(700, 24px, 1.14, 0.03em);
+
 }
 /* Кнопка*/
 %button {
     color: #ffffff;
     background-color: $accent-color;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(700, 16px, 1.88, 0.06em);
     text-decoration: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;

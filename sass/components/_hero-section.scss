@@ -68,20 +68,16 @@
         }
     }
     &__title {
+        @include font(900, 26px, 1.61, 0.06em);
         margin-top: 0;
         margin-bottom: 0;
         color: #ffffff;
-        font-weight: 900;
-        font-size: 26px;
-        line-height: 1.61;
-        letter-spacing: 0.06em;
         text-transform: uppercase;
         max-width: 360px;
         margin-left: auto;
         margin-right: auto;
         @media screen and (min-width:1200px) {
-        font-size: 44px;
-        line-height: 1.36;
+        @include font(null, 44px, 1.36, null);
         max-width: 700px;
         }
     }
@@ -134,9 +130,7 @@
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.5;
+        @include font(700, 20px, 1.5, 0.03em);
         margin: 0 0 12px 0;
         text-align: center; 
         color: $text-color;
@@ -148,7 +142,7 @@
 
 .modal__button {
     position: absolute;
-    @include centeredFlex;
+    @include flex(center,center);
     padding: 0;
     right: 8px;
     top: 8px;
@@ -180,9 +174,7 @@
     flex-direction: column;
     margin-bottom: 10px;
 &__label {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
+    @include font(null, 12px, 1.17, 0.01em);
         color: $secondary-text-color;
         margin-bottom: 4px;
     }
@@ -233,9 +225,7 @@
     }
 
     &::placeholder {
-        font-size: 14px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
+        @include font(null, 14px, 1.17, 0.01em);
         color: rgba(117, 117, 117, 0.5);
     }
 }
@@ -251,15 +241,11 @@
         color: $accent-color;
     }
     &__label {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 12px;
-        line-height: 1.17;
+        @include flex(center, space-between);
+        @include font(null, 12px, 1.17, 0.03em);
         color: $secondary-text-color;
         @media screen and (min-width:1200px) {
-        font-size: 14px;
-        line-height: 1.71;
+        @include font(null, 14px, 1.71, null);
         justify-content: space-evenly;
         }
     }

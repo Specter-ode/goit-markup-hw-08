@@ -16,7 +16,7 @@
     }
 }
 .social-link__button {
-    @include centeredFlex;
+    @include flex(center, center);
     padding: 0;
     border: none;
     border-radius: 50%;

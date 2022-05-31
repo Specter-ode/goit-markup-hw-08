@@ -16,8 +16,7 @@
     &__title {
         @extend %section__title;
         @media screen and (min-width:1200px) {
-            font-size: 36px;
-            line-height: 1.17;
+            @include font(null, 36px, 1.17, 0.03em);
             margin-bottom: 50px;
         }
 }
@@ -28,9 +27,8 @@
     }
     &__list {
         @extend %list;
-        display: flex;
+        @include flex(null, center);
         flex-wrap: wrap;
-        justify-content: center;
         margin: -15px;
     }
 }
@@ -81,7 +79,7 @@
 // }
 
 .clients__button {
-    @include centeredFlex;
+    @include flex(center, center);
     border: 1px solid $icon-color;
     border-radius: 4px;
     color: $icon-color;
