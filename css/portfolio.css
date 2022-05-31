@@ -375,26 +375,6 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .header-page__meta {
-    padding: 48px 40px 48px 40px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header-page__meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
 /* Логотип */
 .logo {
   margin: 0;
@@ -466,10 +446,11 @@ img {
 @media screen and (max-width: 767px) {
   .header-page__menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     overflow: scroll;
     padding: 48px 40px 48px 40px;
     background: #FFFFFF;
@@ -477,7 +458,16 @@ img {
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
   .header-page__menu.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -502,12 +492,6 @@ img {
 @media screen and (min-width: 1200px) {
   .header-page__menu {
     margin-left: 93px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav {
-    margin-bottom: 306px;
   }
 }
 
