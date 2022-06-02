@@ -714,6 +714,10 @@ img {
   text-decoration: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Hero / Эффективные решения */
 .hero {
   background-repeat: no-repeat;

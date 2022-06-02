@@ -238,3 +238,6 @@
     @include font(500, 18px, 1.22, 0.02em);
     text-decoration: none;
 }
+.no-scroll {
+    overflow: hidden;
+}

@@ -703,6 +703,10 @@ img {
   text-decoration: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /*Портфолио*/
 @media screen and (min-width: 480px) {
   .portfolio__container {
